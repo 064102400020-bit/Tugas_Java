@@ -1,0 +1,84 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hitung Luas Bangun Datar</title>
+</head>
+
+<body>
+
+    <h2>Program Menghitung Luas</h2>
+
+    <!-- Persegi Panjang -->
+    <h3>1. Persegi Panjang</h3>
+
+    <input type="number" id="panjang" placeholder="Masukkan panjang">
+    <input type="number" id="lebar" placeholder="Masukkan lebar">
+
+    <button onclick="persegiPanjang()">Hitung</button>
+
+    <p id="hasil1"></p>
+
+
+    <!-- Bujur Sangkar -->
+    <h3>2. Bujur Sangkar</h3>
+
+    <input type="number" id="sisi" placeholder="Masukkan sisi">
+
+    <button onclick="bujurSangkar()">Hitung</button>
+
+    <p id="hasil2"></p>
+
+
+    <!-- Segitiga -->
+    <h3>3. Segitiga</h3>
+
+    <input type="number" id="alas" placeholder="Masukkan alas">
+    <input type="number" id="tinggi" placeholder="Masukkan tinggi">
+
+    <button onclick="segitiga()">Hitung</button>
+
+    <p id="hasil3"></p>
+
+
+    <script>
+
+        // Fungsi untuk menghitung luas persegi panjang
+        function persegiPanjang() {
+            let panjang = document.getElementById("panjang").value;
+            let lebar = document.getElementById("lebar").value;
+
+            let luas = panjang * lebar;
+
+            document.getElementById("hasil1").innerHTML =
+                "Luas Persegi Panjang = " + luas;
+        }
+
+
+        // Fungsi untuk menghitung luas bujur sangkar
+        function bujurSangkar() {
+            let sisi = document.getElementById("sisi").value;
+
+            let luas = sisi * sisi;
+
+            document.getElementById("hasil2").innerHTML =
+                "Luas Bujur Sangkar = " + luas;
+        }
+
+
+        // Fungsi untuk menghitung luas segitiga
+        function segitiga() {
+            let alas = document.getElementById("alas").value;
+            let tinggi = document.getElementById("tinggi").value;
+
+            let luas = 0.5 * alas * tinggi;
+
+            document.getElementById("hasil3").innerHTML =
+                "Luas Segitiga = " + luas;
+        }
+
+    </script>
+
+</body>
+</html>
+```
